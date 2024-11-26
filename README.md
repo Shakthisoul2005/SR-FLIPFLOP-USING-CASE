@@ -1,4 +1,9 @@
-# SR-FLIPFLOP-USING-CASE
+```
+NAME : Shakthivel V
+REG NUMBER :
+```
+**EXP 6 .SR-FLIP FLOP-USING-CASE**
+
 
 **AIM:**
 
@@ -35,14 +40,35 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 **Procedure**
 
 /* write all the steps invloved */
-
+```
+1. Type the program in Quartus software.
+2. Compile and run the program.
+3. Generate the RTL schematic and save the logic diagram.
+4. Create nodes for inputs and outputs to generate the timing diagram.
+5. For different input combinations generate the timing diagram.
+```
 **PROGRAM**
+```
+module exp6(q, qbar, s, r, clk);
+input s,r,clk; 
+output q, qbar;
+wire nand1_out; // output of nand1 
+wire nand2_out; // output of nand2 
+nand (nand1_out,clk,s); 
+nand (nand2_out,clk,r); 
+nand(q,nand1_out,qbar);
+nand(qbar,nand2_out,q);
+endmodule
+```
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
+![Screenshot 2024-11-26 113110](https://github.com/user-attachments/assets/20d3bf98-a1c9-4519-86c4-f63b99a1b79c)
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![Screenshot 2024-11-26 113208](https://github.com/user-attachments/assets/3a323ca8-ba31-4586-89ce-030c2a807ae0)
 
 **RESULTS**
+Thus the EXP 6 .SR-FLIP FLOP-USING-CASE IS VERIFIED 
